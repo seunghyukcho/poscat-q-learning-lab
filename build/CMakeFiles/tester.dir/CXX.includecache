@@ -6,37 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/choseunghyek/poscat/q-learning-lab/src/enemy.cpp
-enemy.h
-/Users/choseunghyek/poscat/q-learning-lab/src/enemy.h
-iostream
--
-string
--
-fstream
--
-dirent.h
--
-cmath
--
-
-/Users/choseunghyek/poscat/q-learning-lab/src/main.cpp
-tester.h
-/Users/choseunghyek/poscat/q-learning-lab/src/tester.h
-iostream
--
-
 /Users/choseunghyek/poscat/q-learning-lab/src/player.cpp
 player.h
 /Users/choseunghyek/poscat/q-learning-lab/src/player.h
-
-/Users/choseunghyek/poscat/q-learning-lab/src/tester.cpp
-tester.h
-/Users/choseunghyek/poscat/q-learning-lab/src/tester.h
-
-src/../includes/colormode.h
-ostream
--
 
 src/../includes/enemy.h
 map
@@ -49,14 +21,4 @@ string
 src/../includes/player.h
 enemy.h
 src/../includes/enemy.h
-
-src/../includes/tester.h
-iostream
--
-player.h
-src/../includes/player.h
-enemy.h
-src/../includes/enemy.h
-colormode.h
-src/../includes/colormode.h
 
