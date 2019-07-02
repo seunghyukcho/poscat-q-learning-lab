@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/tester.dir/main.cpp.o CMakeFiles/tester.dir/tester.cpp.o CMakeFiles/tester.dir/player.cpp.o CMakeFiles/tester.dir/enemy.cpp.o  -o tester 
