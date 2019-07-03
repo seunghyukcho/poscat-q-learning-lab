@@ -50,10 +50,10 @@ void Enemy::importTestCase(int testCase, std::string fileName)
 int Enemy::convertToState(char board[][4])
 {
 	int ret = 0;
-	for(int i = 1; i < 10; i++)
+	for(int i = 0; i < 9; i++)
 	{
 		char ch = board[i / 3 + 1][i % 3 + 1];
-		ret += (int)pow(3, i - 1) * (ch == '.' ? 0 : (ch == 'O' ? 1 : 2));
+		ret += (int)pow(3, i) * (ch == '.' ? 0 : (ch == 'O' ? 1 : 2));
 	}
 
 	return ret;
