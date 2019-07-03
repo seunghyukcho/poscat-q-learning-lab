@@ -10,5 +10,5 @@ void Player::train(Enemy *enemy)
 
 int Player::selectAction(char board[][4])
 {
-	return 1;
+	return 0;
 }

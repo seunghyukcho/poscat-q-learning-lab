@@ -23,12 +23,10 @@ void Tester::testAll()
 
     std::cout << "\n***Start Testing!***" << std::endl << std::endl;
 
-    for(int t = 0; t < totalTestCases; t++)
+    for(int t = 0; t <= totalTestCases; t++)
     {
-        std::cout << "[TC #";
-        if(t + 1 < 10) std::cout << "0";
-        std::cout << t + 1 << "] ";
-        result = test(t + 1);
+        std::cout << "[TC #" << t << "] ";
+        result = test(t);
 
         switch(result)
         {
@@ -54,7 +52,7 @@ void Tester::testAll()
             break;
     }
 
-    std::cout << "\nTotal Result: " << correctTestCases << " / " << totalTestCases << std::endl;
+    std::cout << "\nTotal Result: " << correctTestCases << " / " << totalTestCases + 1 << std::endl;
     if(correctTestCases == totalTestCases)
     {
         std::cout << green << "\nCongratulations! You're now the best tic-tac-toe player in the history!" << def << std::endl;

@@ -42,7 +42,7 @@ make
 Total Result: 0 / 2702
 ```
 
-- 이제 2702개의 testcase에 대해서 모두 정답을 맞는 것을 목표로 하시면 됩니다!
+- 이제 44922개의 testcase에 대해서 모두 정답을 맞는 것을 목표로 하시면 됩니다!
 - 코드는 src/player.cpp의 train과 selectAction 함수를 구현하시면 됩니다. 
 - **단, player.cpp와 player.h 이외의 코드는 수정하시면 안됩니다!**
 
