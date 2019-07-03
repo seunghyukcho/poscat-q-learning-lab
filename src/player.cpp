@@ -2,7 +2,10 @@
 
 void Player::train(Enemy *enemy)
 {
-	char state[4][4];
+	char state[4][4] = { '.', '.', '.', '.', 
+						'.', 'O', '.', '.', 
+						'.', '.', '.', '.', 
+						'.', '.', '.', '.' };
 	// Replace the under code with yours
 	
 	enemy->action(state); // it will return the actions of enemy if the state is given.

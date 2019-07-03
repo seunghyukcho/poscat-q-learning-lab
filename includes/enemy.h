@@ -18,7 +18,7 @@ public:
 	void importTestCase(int testCase, std::string fileName);
 	int getTestCaseNumbers();
 	int action(char board[][4]);
-	int convertToState(char board[][4]);
+	int convertToState(char board[][4], bool player);
 	void getTestCase(int testCase, char board[][4]);
 	void getSolution(int testCase, std::vector<int>& ret);
 };

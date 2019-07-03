@@ -38,7 +38,7 @@ void Enemy::importTestCase(int testCase, std::string fileName)
 			for(int c = 1; c < 4; c++)
 				testCases[testCase][r][c] = inputState[(r - 1) * 3 + c - 1];
 
-		testCaseIdx[convertToState(testCases[testCase])] = testCase;
+		testCaseIdx[convertToState(testCases[testCase], true)] = testCase;
 	}
 	catch(...)
 	{
@@ -47,13 +47,13 @@ void Enemy::importTestCase(int testCase, std::string fileName)
 	}
 }
 
-int Enemy::convertToState(char board[][4])
+int Enemy::convertToState(char board[][4], bool player = false)
 {
 	int ret = 0;
 	for(int i = 0; i < 9; i++)
 	{
 		char ch = board[i / 3 + 1][i % 3 + 1];
-		ret += (int)pow(3, i) * (ch == '.' ? 0 : (ch == 'O' ? 1 : 2));
+		ret += (int)pow(3, i) * (ch == '.' ? 0 : ((player && ch == 'O') || (!player && ch == 'X') ? 1 : 2));
 	}
 
 	return ret;
