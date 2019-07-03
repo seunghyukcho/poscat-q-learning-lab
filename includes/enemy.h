@@ -3,7 +3,7 @@
 #include <map>
 #include <vector>
 #include <string>
-#define TEST_NUMBER 3000
+#define TEST_NUMBER 5000
 
 class Enemy
 {

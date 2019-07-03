@@ -2,37 +2,13 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <dirent.h>
 #include <cmath>
-
-void readDirectory(const std::string& name, std::vector<std::string>& v)
-{
-    DIR* dirp = opendir(name.c_str());
-    struct dirent *dp;
-
-    if(dirp == NULL)
-    {
-    	std::cout << "cannot open... please check your directory\n";
-    	exit(1);
-    }
-
-    while ((dp = readdir(dirp)) != NULL) {
-    	if(strlen(dp->d_name) == 0 || strstr(dp->d_name, ".txt") == NULL)
-    		continue;
-        v.push_back(dp->d_name);
-    }
-
-    closedir(dirp);
-}
 
 Enemy::Enemy()
 {
-	std::vector<std::string> fileNames;
-	readDirectory("testcases", fileNames);
-
-	testCaseNumbers = fileNames.size();
-	for(int i = 1; i <= testCaseNumbers; i++)
-		importTestCase(i, fileNames[i - 1]);
+	testCaseNumbers = 4491;
+	for(int i = 0; i <= testCaseNumbers; i++)
+		importTestCase(i, "test" + std::to_string(i) + ".txt");
 }
 
 int Enemy::getTestCaseNumbers()
@@ -52,11 +28,15 @@ void Enemy::importTestCase(int testCase, std::string fileName)
 
 	try 
 	{
+		std::string inputState;
+		inFile >> inputState;
+
 		for(int i = 1; i < 10; i++)
 			inFile >> actionScore[testCase][i];
+
 		for(int r = 1; r < 4; r++)
 			for(int c = 1; c < 4; c++)
-				testCases[testCase][r][c] = fileName[(r - 1) * 3 + c - 1];
+				testCases[testCase][r][c] = inputState[(r - 1) * 3 + c - 1];
 
 		testCaseIdx[convertToState(testCases[testCase])] = testCase;
 	}
