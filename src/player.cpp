@@ -1,14 +1,15 @@
 #include "player.h"
+#include <iostream>
 
 void Player::train(Enemy *enemy)
 {
 	char state[4][4] = { '.', '.', '.', '.', 
-						'.', 'O', '.', '.', 
+						'.', '.', '.', '.', 
 						'.', '.', '.', '.', 
 						'.', '.', '.', '.' };
 	// Replace the under code with yours
 	
-	enemy->action(state); // it will return the actions of enemy if the state is given.
+	int result = enemy->action(state); // it will return the actions of enemy if the state is given.
 }
 
 int Player::selectAction(char board[][4])
