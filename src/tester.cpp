@@ -6,9 +6,9 @@ Tester::Tester()
     enemy = new Enemy();
 }
 
-void Tester::train()
+void Tester::train(int episodes)
 {
-	for(int episode = 0; episode < 100; episode++)
+	for(int episode = 0; episode < episodes; episode++)
         player->train(enemy);
 }
 

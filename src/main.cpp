@@ -4,6 +4,6 @@
 int main()
 {
 	Tester *tester = new Tester();
-	tester->train();
+	tester->train(50000);
 	tester->testAll();
 }

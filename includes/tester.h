@@ -14,7 +14,7 @@ private:
 
 public:
 	Tester();
-	void train();
+	void train(int episodes);
 	void testAll();
 	int test(int testCase);
 	bool isCorrect(char board[][4]);

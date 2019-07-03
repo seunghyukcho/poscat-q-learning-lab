@@ -99,7 +99,17 @@ void Enemy::getTestCase(int testCase, char board[][4])
 
 void Enemy::getSolution(int testCase, std::vector<int>& ret)
 {
+	double mx = -1.0;
 	for(int i = 1; i < 10; i++)
-		if(actionScore[testCase][i] > 0.5)
+	{
+		double score = actionScore[testCase][i];
+		if(mx < score)
+		{
+			ret.clear();
+			mx = score;
 			ret.push_back(i);
+		}
+		else if(mx == score)
+			ret.push_back(i);
+	}
 }
